@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
-mongoose.connect(process.env.MONGO_DB)
+mongoose.connect("mongodb://localhost:27017")
 .then(() => {
     console.log('Database connection established successfully');
 })
